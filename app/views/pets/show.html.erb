@@ -1,18 +1,31 @@
 <div class="container col-lg-4 p-4">
-<div class="card mb-4 shadow-sm p-2">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Hello, I'm a Pet!!</h4>
-          </div>
-          <div class="card-body">
-            <h1 class="text-center"><i class="fas fa-paw"></i></h1>
-            <h1 class="card-title pricing-card-title">My name is: <%=@pet.name%>
-            <br><small class="text-muted">Breed: <%=@pet.breed%></small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>Age: <%=@pet.age%></li>
-              <li>Gender: <%=@pet.gender%></li>
-              <li>Size: <%=@pet.size%></li>
-            </ul>
-            <%= link_to  "Show all pets", "/pets",class:"btn btn-lg btn-block btn-outline-primary" %>
-          </div>
+    <div class="card mb-4 shadow-sm p-2">
+        <div class="card-header">
+            <h2 class="my-0 font-weight-bold text-center">Detalle del Paciente</h2>
         </div>
+        <div class="card-body">
+            <h1 class="text-center"><i class="fas fa-paw"></i></h1>
+            <h1 class="card-title pricing-card-title">Mi nombre es:
+                <%=@pet.name%>
+                <br><small class="text-muted">Mi raza:
+                    <%=@pet.breed%></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+                <li>Mi edad:
+                    <%=@pet.age%>
+                </li>
+                <li>Mi genero es:
+                    <%=@pet.gender%>
+                </li>
+                <li>Mi tamaño es:
+                    <%=@pet.size%>
+                </li>
+            </ul>
+            <div class="row">
+                <div class="col">
+                    <%= link_to  "Ver todos los pacientes", pets_path,class:"btn btn-lg btn-block btn-outline-primary" %>
+                    <%= link_to "Eliminar mascota", pet_path(@pet.id), method: :delete, class:"btn btn-lg btn-block btn-secondary bd-highlight" %>
+                    <div>
+                    </div>
+                </div>
+            </div>
         </div>

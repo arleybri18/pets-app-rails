@@ -1,7 +1,7 @@
 <div class="container col-lg-6 p-5">
     <div class="card">
         <div class="card-header">
-            <h2 class="my-0 font-weight-bold text-center">Formulario de Registro</h2>
+            <h2 class="my-0 font-weight-bold text-center">Cambiar Datos del Paciente</h2>
         </div>
         <div class="card-body">
             <%= form_for @pet do |f| %>
@@ -43,7 +43,7 @@
             </fieldset>
             <div class="form-group row">
                 <div class="col-sm-12 text-center">
-                    <%= f.submit "Registrar", class:"btn btn-primary"%>
+                    <%= f.submit "Editar", class:"btn btn-primary"%>
                     <%= link_to  "Volver", pets_path, class:"btn btn-primary"%>
 
                 </div>

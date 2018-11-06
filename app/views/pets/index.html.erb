@@ -1,26 +1,30 @@
-
 <div class="row">
-<div class="container col-lg-6 p-2">
-<div class="card">
-<div class="card-header">
+    <div class="container col-lg-6 p-2">
+        <div class="card">
+            <div class="card-header">
 
-<h1 class="text-center">List of Pets</h1>
-</div>
-<div class="card-body">
-<p class="text-center"><%= link_to  "Add a Pet", "/pets/new",class:"btn btn-dark ml-2 p-1 bd-highlight" %></p>
-<ul class="list-group">
-<%@pets.each do |pet|%>
-<li class="list-group-item d-flex bd-highlight mb-2 align-items-center">
-<p  class="mr-auto h3 p-1 bd-highlight"><i class="h5 fas fa-paw"></i> <%=pet.name%></p>
-<%= link_to  "Show", "/pets/#{pet.id}",class:"btn btn-primary ml-2 p-1 bd-highlight" %>
-<%= link_to  "Edit", "/pets/#{pet.id}/edit",class:"btn btn-secondary ml-2 p-1 bd-highlight" %>
-<%= link_to  "Delete", "/pets/#{pet.id}",class:"btn btn-secondary ml-2 p-1 bd-highlight" %>
-</li>
+                <h1 class="text-center">CLÍNICA VETERINARIA MyPET</h1>
+                <p class="text-center"> Nuestros pacientes ahora tienen mejor salud, conócelos: </p>
+            </div>
+            <div class="card-body">
+                <p class="text-center">
+                    <%= link_to  "Quiero registrar mi mascota", new_pet_path,class:"btn btn-dark ml-2 p-1 bd-highlight" %>
+                </p>
+                <ul class="list-group">
+                    <%@pets.each do |pet|%>
+                    <li class="list-group-item d-flex bd-highlight mb-2 align-items-center">
+                        <p class="mr-auto h3 p-1 bd-highlight"><i class="h5 fas fa-paw"></i>
+                            <%=pet.name%>
+                        </p>
+                        <%= link_to  "Ver Detalle", pet_path(pet),class:"btn btn-primary ml-2 p-1 bd-highlight" %>
+                        <%= link_to  "Editar", edit_pet_path(pet),class:"btn btn-secondary ml-2 p-1 bd-highlight" %>
 
-<%end%>
-</ul>
-</div>
-</div>
-</div>
+                    </li>
+
+                    <%end%>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 </div>
